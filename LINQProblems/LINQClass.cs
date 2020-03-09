@@ -36,19 +36,9 @@ namespace LINQProblems
              */
 
             //var average = grades.Select(g => g.Split(',').Select(s => Convert.ToDouble(s)).Select(o => g.Where(p => p!= g.Min())));
-            var split = grades.Select(g => g.Split(',').Select(s => Convert.ToDouble(s)));
-            var split2 = split.Select(s => s.Where(x => x!= s.Min()));
-            var split3 = grades.Select(a => a.Split(',').Select(b => Convert.ToDouble(b))).Select(c => c.Where(d => d != c.Min()));
-            var split4 = split3.Select(grades2 => grades2.Average());
-            var split5 = split4.Average();
-
-
             
             
-            
-            Console.ReadLine();
-            
-            return 10.0;
+            return var split3 = grades.Select(a => a.Split(',').Select(b => Convert.ToDouble(b))).Select(c => c.Where(d => d != c.Min())).Select(e => e.Average()).Average(); ;
         }
     }
 }
