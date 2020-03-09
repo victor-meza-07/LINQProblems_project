@@ -10,7 +10,8 @@ namespace LINQProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Justin");
+            LINQClass lINQClass = new LINQClass();
+            lINQClass.FirsProblem();
         }
     }
 }
