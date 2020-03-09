@@ -17,12 +17,6 @@ namespace LINQProblems
             {
                 Console.WriteLine(word);
             }
-            
-            Console.ReadLine();
-
-
-            List<string> vs = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
-            vs = lINQClass.second(vs);
         }
     }
 }

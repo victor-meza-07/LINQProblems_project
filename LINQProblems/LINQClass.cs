@@ -16,9 +16,9 @@ namespace LINQProblems
             return words.Where(w => w.Any(x => w.Contains("th")));
         }
 
-        public List<string> second(List<string> vs) 
+        public List<string> SecondProblem(List<string> names)
         {
-            return vs.Select(v => v).Distinct().ToList();
+            return names.Select(n => n).Distinct().ToList();
         }
     }
 }
