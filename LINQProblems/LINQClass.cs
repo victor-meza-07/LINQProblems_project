@@ -15,5 +15,10 @@ namespace LINQProblems
         {
             return words.Where(w => w.Any(x => w.Contains("th")));
         }
+
+        public List<string> second(List<string> vs) 
+        {
+            return vs.Select(v => v).Distinct().ToList();
+        }
     }
 }
