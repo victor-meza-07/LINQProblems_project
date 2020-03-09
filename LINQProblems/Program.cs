@@ -18,6 +18,15 @@ namespace LINQProblems
                 Console.WriteLine(word);
             }
             
+       
+
+            List<string> names = new List<string>() {"Mike", "Brad", "Nevin", "Ian", "Mike" };
+            var newNames = lINQClass.SecondProblem(names);
+            foreach(var name in newNames)
+            {
+                Console.WriteLine(name);
+            }
+
             Console.ReadLine();
 
         }
