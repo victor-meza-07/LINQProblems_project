@@ -11,7 +11,15 @@ namespace LINQProblems
         static void Main(string[] args)
         {
             LINQClass lINQClass = new LINQClass();
-            lINQClass.FirsProblem();
+            List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            var newWords = lINQClass.FirsProblem(words);
+            foreach(var word in newWords)
+            {
+                Console.WriteLine(word);
+            }
+            
+            Console.ReadLine();
+
         }
     }
 }

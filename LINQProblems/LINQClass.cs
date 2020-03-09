@@ -12,10 +12,8 @@ namespace LINQProblems
         {}
 
         public IEnumerable<string> FirsProblem(List<string> words)
-        { 
-            var notwords = words.Where(w => w.Any(x => w.Contains("th")));
-            
-            return notwords;
+        {
+            return words.Where(w => w.Any(x => w.Contains("th")));
         }
     }
 }
