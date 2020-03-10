@@ -21,7 +21,7 @@ namespace LINQProblems
             return names.Select(n => n).Distinct().ToList();
         }
 
-        public double ThirdProblem(List<string> grades) 
+        public string ThirdProblem(List<string> grades) 
         {
 
             //First Cast to double all of the things in this collection;
@@ -38,7 +38,12 @@ namespace LINQProblems
             //var average = grades.Select(g => g.Split(',').Select(s => Convert.ToDouble(s)).Select(o => g.Where(p => p!= g.Min())));
             
             
-            return var split3 = grades.Select(a => a.Split(',').Select(b => Convert.ToDouble(b))).Select(c => c.Where(d => d != c.Min())).Select(e => e.Average()).Average(); ;
+            return grades.Select(a => a.Split(',').Select(b => Convert.ToDouble(b))).Select(c => c.Where(d => d != c.Min())).Select(e => e.Average()).Average().ToString(); 
+        }
+
+        public Dictionary<char, string> FourthProblem(string input)
+        {
+            return input.ToLower().OrderBy(c => c).GroupBy(a => a).ToDictionary(b => b.Key, b => b.Count().ToString());
         }
     }
 }
