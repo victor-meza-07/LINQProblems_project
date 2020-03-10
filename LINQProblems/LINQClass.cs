@@ -27,18 +27,22 @@ namespace LINQProblems
             //First Cast to double all of the things in this collection;
             //for each field, drop the min value, and average the rest;
             //average the collection;
-
-
-
             /*
              SLECT * from ListName
              where 
              */
-
             //var average = grades.Select(g => g.Split(',').Select(s => Convert.ToDouble(s)).Select(o => g.Where(p => p!= g.Min())));
-            
-            
-            return var split3 = grades.Select(a => a.Split(',').Select(b => Convert.ToDouble(b))).Select(c => c.Where(d => d != c.Min())).Select(e => e.Average()).Average(); ;
+           
+            return  grades.Select(a => a.Split(',').Select(b => Convert.ToDouble(b))).Select(c => c.Where(d => d != c.Min())).Select(e => e.Average()).Average();
+        }
+
+        public string FourthAndFinal(string name) 
+        {
+
+            //Alphabetize
+            var arr = name.OrderBy(a => a.ToString().ToLower());
+
+            return name; 
         }
     }
 }
