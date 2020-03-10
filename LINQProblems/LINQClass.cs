@@ -32,17 +32,14 @@ namespace LINQProblems
              where 
              */
             //var average = grades.Select(g => g.Split(',').Select(s => Convert.ToDouble(s)).Select(o => g.Where(p => p!= g.Min())));
+
            
             return  grades.Select(a => a.Split(',').Select(b => Convert.ToDouble(b))).Select(c => c.Where(d => d != c.Min())).Select(e => e.Average()).Average();
         }
 
-        public string FourthAndFinal(string name) 
+        public Dictionary<char, string> FourthProblem(string input)
         {
-
-            //Alphabetize
-            var arr = name.OrderBy(a => a.ToString().ToLower());
-
-            return name; 
+            return input.ToLower().OrderBy(c => c).GroupBy(a => a).ToDictionary(b => b.Key, b => b.Count().ToString());
         }
     }
 }
